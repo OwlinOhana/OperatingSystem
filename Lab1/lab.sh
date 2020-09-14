@@ -8,7 +8,7 @@
 
 IFS=$'\n'
 echo "Доступные функции программы
- -h - получить справку
+-h - получить справку
 -I - вывод сетевых интерфейсов 
 -U - отключение/включение  интерфейса
 -In - установка IP/Mask/Gateway для определённого интерфейса
@@ -23,7 +23,7 @@ case "$var" in
 	-h) read "Доступные команды 
 		-a -авторы 
 		-ar - все доступны аргументы
-        -readme - краткое описание проекта
+                 -readme - краткое описание проекта
 		-example - примеры запуска " v
 		if [-n $v]
 		then
@@ -42,7 +42,8 @@ case "$var" in
 		-example) echo "здесь что-то есть"
 			;;
 		-*) echo "Неизвестное действие"
-		exit 1
+		    exit 1
+		     ;;
 		fi
 		;;
 	-I) ip link show
@@ -105,7 +106,7 @@ case "$var" in
 		#https://itproffi.ru/otslezhivanie-sostoyaniya-seti-v-linux-komanda-netstat/
 		netstat #netstat -a | more ||-atu
 		;;
-	-e) exit 1
+	-e) return 0
 		;;
 
 
