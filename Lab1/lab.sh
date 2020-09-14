@@ -44,6 +44,7 @@ case "$var" in
 		-*) echo "Неизвестное действие"
 		    exit 1
 		     ;;
+		     esac
 		fi
 		;;
 	-I) ip link show
@@ -61,6 +62,7 @@ case "$var" in
 			;;
 		-*) echo "Неизвестное действие"
 			;;
+		esac
 		else exit 1
 		fi
 		;;
@@ -83,6 +85,7 @@ case "$var" in
 			;;
 		-*) echo "Неизвестное действие"
 			;;
+		esac
 		else exit 1
 		fi
 		;;
@@ -109,7 +112,7 @@ case "$var" in
 	-e) return 0
 		;;
 
-
+esac
 done
 
 
