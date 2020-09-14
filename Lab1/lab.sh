@@ -25,7 +25,7 @@ case "$var" in
 		-ar - все доступны аргументы
                  -readme - краткое описание проекта
 		-example - примеры запуска " v
-		if [-n $v]
+		if [ -n $v]
 		then
 		case "$v" in
 		-a) echo "авторы"	
