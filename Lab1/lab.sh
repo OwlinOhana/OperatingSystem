@@ -16,8 +16,8 @@ echo "Доступные функции программы
 -L - отображение сетевой статиститки
 -e - exit"
 
+while true
 read var
-while [-n $var ]
 do 
 case "$var" in
 	-h) read "Доступные команды 
