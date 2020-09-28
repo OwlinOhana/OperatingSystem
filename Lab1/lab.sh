@@ -21,7 +21,7 @@ read var
 do 
 case "$var" in
 	-h) echo "Доступные команды 
-		-a -авторы 
+		-a -авторы
 		-ar - все доступны аргументы
                 -readme - краткое описание проекта
 		-example - примеры запуска " 
@@ -81,7 +81,7 @@ case "$var" in
 		ifconfig
 		echo "Введите имя интерфейса сети " 
 		read link
-		echo "M - изменить маску Ip - изменить ip  G - изменить Gateway" 
+		echo "M - изменить маску Ip - изменить IP  G - изменить Gateway" 
 		read v
 		if [ -n $v ]
 		then
@@ -90,14 +90,14 @@ case "$var" in
 			read int
 			ifconfig $link netmask $int 	
 			;;
-		-Ip) echo "Введите новый ip" 
+		-Ip) echo "Введите новый IP" 
 			read int
 			ifconfig $link $int
 			;;
-		-G) echo "Введите ip адрес шлюза, который нужно заменить:"
+		-G) echo "Введите IP адрес шлюза, который нужно заменить:"
 			read int
 			ip route del default via $int dev $link
-			echo "Введите новый ip адрес шлюза:"
+			echo "Введите новый IP адрес шлюза:"
 			read int
 			ip route add default via $int dev $link
 			;;
@@ -110,13 +110,13 @@ case "$var" in
 		;;
 	-K) 
 		netstat -tulpn
-		echo "Введите номер порта " 
+		echo "Введите № порта " 
 		read v
 		if [ -n $v ]
 		then
 		lsof -i:$v #Эта команда возвращает список открытых процессов на этом порту.
 		else exit 1
-		echo "Введите номер процесса" 
+		echo "Введите № процесса" 
 		read proc
 		fi
 		if [ -n $proc ]
